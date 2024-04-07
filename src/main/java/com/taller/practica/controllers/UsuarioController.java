@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -24,7 +25,13 @@ public class UsuarioController {
     @GetMapping
     public ResponseEntity<List<Usuario>> findAll() {
         List<Usuario> list = usuarioRepository.findAll();
-        
         return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    @GetMapping("/{id}")
+    private ResponseEntity<Usuario> findById(@PathVariable Integer id) {
+        return usuarioRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }
