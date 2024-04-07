@@ -40,4 +40,10 @@ public class UsuarioController {
         usuarioRepository.deleteById(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAll(){
+        usuarioRepository.deleteAll();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
