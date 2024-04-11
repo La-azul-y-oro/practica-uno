@@ -1,3 +1,11 @@
+insert into persona (id, numero, calle, nombre) values (1, 123, 'calle', 'Pedro');
+insert into persona (id, numero, calle, nombre) values (2, 1234, 'calle2', 'Miguel');
+insert into persona (id, numero, calle, nombre) values (3, 12345, 'calle3', 'Luis');
+
+insert into telefono (id, numero, codigo_area, persona_id) values (1, 1234, 341, 1);
+insert into telefono (id, numero, codigo_area, persona_id) values (2, 12345, 341, 1);
+insert into telefono (id, numero, codigo_area, persona_id) values (3, 123456, 341, 2);
+
 insert into usuario (id, username, password, email, enabled) values (1, 'gscarffe0', 'yE4$qM~7c''/e', 'bskitteral0@epa.gov', true);
 insert into usuario (id, username, password, email, enabled) values (2, 'vwitson1', 'mF0)_''$NV', 'rvirgo1@aboutads.info', true);
 insert into usuario (id, username, password, email, enabled) values (3, 'gyetts2', 'lG1}b\<*b', 'aalbisser2@arizona.edu', false);

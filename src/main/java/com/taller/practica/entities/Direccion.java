@@ -1,0 +1,15 @@
+package com.taller.practica.entities;
+
+import java.util.Set;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Embeddable
+@Getter
+@Setter
+public class Direccion {
+    private String calle;
+    private Integer numero;
+}
