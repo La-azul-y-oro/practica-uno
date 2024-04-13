@@ -16,6 +16,8 @@ public class Persona {
     private String nombre;
     @ManyToMany(mappedBy = "personas")
     private Set<DireccionEntity> direcciones;
+    @Embedded
+    private Direccion direccion;
     @OneToMany
     @JoinColumn(name = "persona_id")
     private Set<Telefono> telefono;
