@@ -14,6 +14,8 @@ public class Persona {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombre;
+    @ManyToMany(mappedBy = "personas")
+    private Set<DireccionEntity> direcciones;
     @Embedded
     private Direccion direccion;
     @OneToMany
