@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
     private String username;
@@ -15,5 +15,7 @@ public class Usuario {
     private String password;
     private String email;
     @Column(nullable = false)
-    private Boolean enabled;
+    private boolean enabled = true;
+    
+    private transient Long calculada;
 }
