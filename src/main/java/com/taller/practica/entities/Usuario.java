@@ -15,7 +15,7 @@ public class Usuario {
     private String password;
     private String email;
     @Column(nullable = false)
-    private Boolean enabled;
+    private boolean enabled = true;
     
     private transient Long calculada;
 }

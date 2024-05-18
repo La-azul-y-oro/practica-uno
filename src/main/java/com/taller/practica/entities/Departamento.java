@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 public class Departamento {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer valor;
     @Embedded

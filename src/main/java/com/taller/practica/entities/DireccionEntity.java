@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class DireccionEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String calle;
